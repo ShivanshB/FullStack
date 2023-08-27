@@ -1,0 +1,18 @@
+.container {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+    width: 300px;
+}
+
+.pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
