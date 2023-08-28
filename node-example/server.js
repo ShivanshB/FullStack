@@ -9,6 +9,12 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+
+app.get('/styles.css', (req, res) => {
+    res.sendFile(__dirname + '/styles.css');
+});
+
+
 app.listen(port, () => {
     console.log(`Example app listening at https://localhost:${port}`);
 });
