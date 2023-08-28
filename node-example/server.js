@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const port = 3000;
+const ejs = require('ejs')
 let totalViews = 0
 
 const app = express();
@@ -29,7 +30,7 @@ app.get('/', (req, res) => {
     // fs.writeFileSync('views.txt', String(totalViews));
 
     let html = fs.readFileSync(__dirname + '/index.html', 'utf8');
-    html = html.replace('{{views}}', totalViews);
+    html = ejs.render(html, {views: totalViews});
 
     res.setHeader('Set-Cookie', `views=${totalViews}`);
     res.send(html);
