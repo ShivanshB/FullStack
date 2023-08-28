@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const port = 3000;
 const ejs = require('ejs')
-let totalViews = 0
+// let totalViews = 0 Used for cookies but uneccesary when using ejs
 
 const app = express();
 
